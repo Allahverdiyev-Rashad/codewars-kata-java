@@ -2,7 +2,7 @@ public class CamelCase {
     public static String camelCase(String input) {
 
         char[] arr = input.toCharArray();
-        String camelCase = "";
+        StringBuilder camelCase = new StringBuilder();
 
         for (char temp : arr) {
 //            if (Character.isLowerCase(temp)) {
@@ -10,8 +10,8 @@ public class CamelCase {
 //            } else {
 //                camelCase += " " + temp;
 //            }
-            camelCase += Character.isLowerCase(temp) ? temp : " " + temp;
+            camelCase.append(Character.isLowerCase(temp) ? temp : " " + temp);
         }
-        return camelCase;
+        return camelCase.toString();
     }
 }
